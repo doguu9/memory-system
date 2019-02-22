@@ -1,8 +1,11 @@
 # Memory System Info
 ## Required repositories
 [Siamese Network](https://github.com/BerkeleyAutomation/perception/tree/dev_dmwang)
+
 [SD Mask R-CNN](https://github.com/BerkeleyAutomation/sd-maskrcnn)
+
 [Process Wisdom Dataset](https://github.com/BerkeleyAutomation/perception/blob/dev_dmwang/tools/process_wisdom_dataset.py)
+
 [Wisdom Dataset](https://berkeley.box.com/shared/static/7aurloy043f1py5nukxo9vop3yn7d7l3.rar)
 ## Instructions
 All classification tests have been run on the siamese network listed above. All data passed into this network must first be converted to featurized numpy arrays via the script `featurize_images.py` located in the repository. Parameters can be modified in the `train.yaml` file. All grayscale images used for testing have been converted via the `mogrify -type Grayscale [image]` terminal command.
