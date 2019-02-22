@@ -1,0 +1,14 @@
+model:
+  model_filename: /nfs/diskstation/dmwang/mech_search_siamese_models/embedding_models/first_attempt.h5
+  input_shape: [9984] # Use this for feature-based model.
+  layer_sizes: [2048, 1024, 512]
+
+train:
+  dataset_path: /nfs/diskstation/dmwang/mech_search_data_features
+  learning_rate: 0.0001
+  epochs: 10
+  batch_size: 64
+  shuffle_training_inputs: 1
+  num_train_pairs: 10000
+  num_val_pairs: 1000
+  data_augmentation_suffixes: ['']
