@@ -1,5 +1,7 @@
 # Memory System Info
 ## Required repositories
+[AUTOLAB Perception Repository](https://github.com/BerkeleyAutomation/perception)
+
 [Siamese Network](https://github.com/BerkeleyAutomation/perception/tree/dev_dmwang)
 
 [SD Mask R-CNN](https://github.com/BerkeleyAutomation/sd-maskrcnn)
@@ -8,6 +10,8 @@
 
 [Wisdom Dataset](https://berkeley.box.com/shared/static/7aurloy043f1py5nukxo9vop3yn7d7l3.rar)
 ## Instructions
+Many of the scripts used in these tests require the AUTOLab perception repository.
+
 All classification tests have been run on the siamese network listed above. All data passed into this network must first be converted to featurized numpy arrays via the script `featurize_images.py` located in the repository. Parameters can be modified in the `train.yaml` file. All grayscale images used for testing have been converted via the `mogrify -type Grayscale [image]` terminal command.
 
 A slightly modified version of the siamese network is included in this repository. The main difference between it and the original is the addition of code allowing for data to be extracted from the training process for error analysis. A corresponding error analysis script for this version of the siamese network is included as well.
