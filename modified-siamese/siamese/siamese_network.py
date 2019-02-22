@@ -120,7 +120,7 @@ class SiameseNetwork(object):
         train_dataset = ImageDataset(config['dataset_path'], 'train', config['data_augmentation_suffixes'], config['allow_different_views'])
         train_dataset.prepare(config['num_train_pairs'])
 
-        val_dataset = ImageDataset(config['dataset_path'], 'grayscale-3')
+        val_dataset = ImageDataset(config['dataset_path'], 'validation')
         val_dataset.prepare(config['num_val_pairs'])
 
         train_generator = DataGenerator(train_dataset, batch_size=config['batch_size'],

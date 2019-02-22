@@ -1,5 +1,4 @@
 model:
-  # model_filename: /nfs/diskstation/projects/mech_search/siamese_net_models/feature_l1_test_new
   model_filename: /nfs/diskstation/dmwang/mech_search_siamese_models/full_images_dataset/best_model20181024T2052/mask_rcnn_best_model_0007.h5
   # input_shape: [512, 512, 3]  # Use this for image-based model.
   input_shape: [9984] # Use this for feature-based model.
@@ -16,9 +15,7 @@ model:
   distance_network_layer_sizes_after_concat: [512, 256]
 
 train:
-  # dataset_path: /nfs/diskstation/projects/mech_search/siamese_net_training/phoxi_training_dataset
-  #dataset_path: /nfs/diskstation/dmwang/mech_search_data_rotate_full_images_features
-  dataset_path: /home/kate/proj1/sd-maskrcnn/scripts/
+  dataset_path: /nfs/diskstation/projects/mech_search/siamese_net_training/phoxi_training_dataset
   dataset_type: features # images or features
   learning_rate: 0.00005 #0.0001
   weights: imagenet # imagenet, last, or random
@@ -30,5 +27,3 @@ train:
   # data_augmentation_suffixes: ['', '_rotate_and_scale']
   data_augmentation_suffixes: ['']
   allow_different_views: 1  # For positive examples.
-
-  #dataset_path: /home/kate/proj1/imgs/color_features

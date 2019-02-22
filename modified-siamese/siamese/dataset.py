@@ -35,8 +35,7 @@ class ImageDataset(object):
         assert base_path != "", "You must provide the path to a dataset!"
 
         self.data_path = os.path.join(base_path, imset)
-        self.orig_images_path = '/home/kate/proj1/sd-maskrcnn/scripts/originals2/' #'/nfs/diskstation/dmwang/mech_search_data_features/originals'
-        #'imgs/grayscale/phoxi_byclass/originals'
+        self.orig_images_path = 'ORIGINAL IMAGE DATASET GOES HERE'
         self._class_labels = os.listdir(self.data_path)
         self._num_classes = len(self._class_labels)
         self._num_images = len(os.listdir(os.path.join(self.data_path, self._class_labels[0])))
